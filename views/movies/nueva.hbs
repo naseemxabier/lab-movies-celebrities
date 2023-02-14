@@ -1,0 +1,26 @@
+<h2>Movies</h2>
+
+{{!-- {{#each .}}
+<p>{{name}}</p>
+<p>{{_id}}</p>
+{{/each}} --}}
+
+<form action="" method="POST">
+  <div class="mb-3">
+    <label for="title" class="form-label">Title</label>
+    <input type="text" class="form-control" id="title" name="title">
+     <label for="genre" class="form-label">Genre</label>
+    <input type="text" class="form-control" id="genre" name="genre">
+    <label for="plot" class="form-label">Plot</label>
+    <input type="text" class="form-control" id="plot" name="plot">
+    <label for="cast" class="form-label">Cast</label>
+    <input type="text" class="form-control" id="cast" name="cast">
+    <label for="actors" class="form-label">Cast</label>
+    <input type="text" class="form-control" id="actor" name="actor">
+    <select name="actor" id="actor"></select>
+  </div>
+  {{#each .}}
+  <option value ="">{{name}}</option>
+  {{/each}}
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
