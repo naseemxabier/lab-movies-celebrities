@@ -3,13 +3,7 @@ const Movie = require("../models/Movie.model")
 const Celebrity = require("../models/Celebrity.model")
 
 router.get("/create", (req, res, next) => {
-Celebrity.find()
-.populate("name")
-.then(result => {
-    res.render("movies/nueva", result)
-})
-.catch(err => next(err))
-})
+    res.render("movies/nueva") })
 router.post("/create", (req, res, next) => {
     let newMovie = {
         title: req.body.title,
@@ -18,7 +12,7 @@ router.post("/create", (req, res, next) => {
         cast: req.body.cast,
     }
 Movie.create(newMovie)
-.then(result => {
+.then(result => { 
     console.log(result)
     res.redirect("/movies", result)
 })
